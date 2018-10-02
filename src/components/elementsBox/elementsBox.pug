@@ -1,0 +1,13 @@
+- const eventsList = require("../../events.json")
+//- - const eventsJSON = JSON.stringify(eventsList);
+- const events = eventsList.events
+//- #{events.length}
+// вывод переменное #{a}
+// вывод html !{a}
+
+.elementsBox#blah
+  | Привет
+  | как дела
+
+  each event in events
+      div #{event.type}
