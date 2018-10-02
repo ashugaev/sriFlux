@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   mode: 'development',
-  entry: './src/js/main.js',
+  entry: './src/main.js',
   module: {
     rules: [
       {
@@ -19,7 +19,7 @@ module.exports = {
         use: [
           {
             loader: 'pug-loader',
-            options: {pretty: true}
+            options: {}
           }
         ]
       },
@@ -44,10 +44,10 @@ module.exports = {
     ]
   },
   plugins: [
-    // new HtmlWebPackPlugin({
-    //   template: './index.html',
-    //   filename: './index.html'
-    // }),
+    new HtmlWebPackPlugin({
+      template: './src/index.pug',
+      filename: './index.html'
+    }),
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[id].css'
