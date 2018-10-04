@@ -1,13 +1,22 @@
 - const eventsList = require("../../events.json")
 //- - const eventsJSON = JSON.stringify(eventsList);
 - const events = eventsList.events
+//- - console.log(events);
 //- #{events.length}
 // вывод переменное #{a}
 // вывод html !{a}
 
-.elementsBox#blah
-  | Привет
-  | как дела
+//- include ../btnYesNo/btnYesNo.pug
 
+.elementsBox#blah
   each event in events
-      div #{event.type}
+    div(class="eventItem eventItem__size_"+event.size)
+      div(class="eventItem__icon icon icon_"+event.icon)
+      .eventItem__title #{event.title}
+
+      .eventItem__source #{event.source}
+      .eventItem__time #{event.time}
+      .eventItem__description #{event.description}
+      //- +bro//
+
+
