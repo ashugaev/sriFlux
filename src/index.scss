@@ -1,6 +1,10 @@
 @import "./components/header/header";
 @import "./components/elementsBox/elementsBox";
+@import "./helpers/variables";
+@import "./elements/icons";
+
 
 body {
   padding: 0 40px;
+  margin: 0;
 }
