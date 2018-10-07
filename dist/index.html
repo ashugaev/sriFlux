@@ -1,23 +1,60 @@
-<meta name="robots" content="noindex">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <link href="main.css" rel="stylesheet">
-</head>
-<import>header </import>
-<p>'s Pug source code!</p>
-<div class="header">
-    <div class="icon header__logo"></div>
-    <ul class="header__menu">
-        <li class="header__menu-item header__menu-item_active">
-            <a href="">Сводка</a>
-        </li>
-        <li class="header__menu-item">
-            <a href="">Устройства</a>
-        </li>
-        <li class="header__menu-item">
-            <a href="">Сценарии</a>
-        </li>
-    </ul>
-    <label for="menu-buton-chb" class="icon icon_hamburger header__menu-button"></label>
-</div><b>Рш</b>
-<script type="text/javascript" src="main.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge"><meta name="robots" content="noindex"><title>Умный дом</title>
+<link href="main.css" rel="stylesheet"></head><body><div class="header">
+<div class="icon header__logo"></div>
+<ul class="header__menu">
+<li class="header__menu-item header__menu-item_active">
+<a href="">События</a>
+</li>
+<li class="header__menu-item">
+<a href="">Сводка</a>
+</li>
+<li class="header__menu-item">
+<a href="">Устройства</a>
+</li>
+<li class="header__menu-item">
+<a href="">Сценарии</a>
+</li>
+</ul>
+<label for="menu-buton-chb" class="icon icon_hamburger header__menu-button"></label>
+</div><div class="mainContainer"><div class="mainContainer__header">Лента событий</div><!-- Тут как бы берем урл из img --><div class="elementsBox"><div class="eventItem eventItem_size_l "><div class="eventItem__mainInfoBox"><div class="eventItem__header"><div class="eventItem__icon icon icon_stats"></div><div class="eventItem__title"> <span>Еженедельный отчет по расходам ресурсов</span></div></div><div class="eventItem__infoBox"><div class="eventItem__source">Сенсоры потребления</div><div class="eventItem__time">19:00, Сегодня</div></div></div><div class="eventItem__descriptionBox "><div class="eventItem__description">Так держать! За последнюю неделю вы потратили на 10% меньше ресурсов, чем неделей ранее.</div><div class="eventItem__dataBox"><div class="itemGraph"><img class="itemGraph__img" src="src/components/elementsBox/mixins/graph/img/Richdata@1x.png"></div></div></div></div><div class="eventItem eventItem_size_s "><div class="eventItem__mainInfoBox"><div class="eventItem__header"><div class="eventItem__icon icon icon_key"></div><div class="eventItem__title"> <span>Дверь открыта</span></div></div><div class="eventItem__infoBox"><div class="eventItem__source">Сенсор входной двери</div><div class="eventItem__time">18:50, Сегодня</div></div></div></div><div class="eventItem eventItem_size_s "><div class="eventItem__mainInfoBox"><div class="eventItem__header"><div class="eventItem__icon icon icon_robot-cleaner"></div><div class="eventItem__title"> <span>Уборка закончена</span></div></div><div class="eventItem__infoBox"><div class="eventItem__source">Пылесос</div><div class="eventItem__time">18:45, Сегодня</div></div></div></div><div class="eventItem eventItem_size_s "><div class="eventItem__mainInfoBox"><div class="eventItem__header"><div class="eventItem__icon icon icon_router"></div><div class="eventItem__title"> <span>Новый пользователь</span></div></div><div class="eventItem__infoBox"><div class="eventItem__source">Роутер</div><div class="eventItem__time">18:45, Сегодня</div></div></div></div><div class="eventItem eventItem_size_m "><div class="eventItem__mainInfoBox"><div class="eventItem__header"><div class="eventItem__icon icon icon_thermal"></div><div class="eventItem__title"> <span>Изменен климатический режим</span></div></div><div class="eventItem__infoBox"><div class="eventItem__source">Сенсор микроклимата</div><div class="eventItem__time">18:30, Сегодня</div></div></div><div class="eventItem__descriptionBox "><div class="eventItem__description">Установлен климатический режим «Фиджи»</div><div class="eventItem__dataBox"><div class="itemConditions"><div class="itemConditions__temperatureBox"><span>Температура:</span><b>24</b></div><div class="itemConditions__humidity"><span>Влажность:</span><b>80</b></div></div></div></div></div><div class="eventItem eventItem_size_m eventItem_warning"><div class="eventItem__mainInfoBox"><div class="eventItem__header"><div class="eventItem__icon icon icon_ac_white"></div><div class="eventItem__title"> <span>Невозможно включить кондиционер</span></div></div><div class="eventItem__infoBox"><div class="eventItem__source">Кондиционер</div><div class="eventItem__time">18:21, Сегодня</div></div></div><div class="eventItem__descriptionBox eventItem__descriptionBox_oneRow"><div class="eventItem__description">В комнате открыто окно, закройте его и повторите попытку</div><div class="eventItem__dataBox"></div></div></div><div class="eventItem eventItem_size_m "><div class="eventItem__mainInfoBox"><div class="eventItem__header"><div class="eventItem__icon icon icon_music"></div><div class="eventItem__title"> <span>Музыка включена</span></div></div><div class="eventItem__infoBox"><div class="eventItem__source">Яндекс.Станция</div><div class="eventItem__time">18:16, Сегодня</div></div></div><div class="eventItem__descriptionBox "><div class="eventItem__description">Сейчас проигрывается:</div><div class="eventItem__dataBox"><div class="itemPlayer"><div class="itemPlayer__trackInfo"><img class="itemPlayer__cover" src="https://avatars.yandex.net/get-music-content/193823/1820a43e.a.5517056-1/m1000x1000"><div class="itemPlayer__trackName">Big God</div><div class="itemPlayer__timeBox"><div class="itemPlayer__timeLineBox"><hr class="itemPlayer__timeLine"><div class="itemPlayer__timePointer"></div></div><div class="itemPlayer__timeValue">4:31</div></div></div><div class="itemPlayer__controllers"><div class="icon icon_nextMusic itemPlayer__btnBack"></div><div class="icon icon_nextMusic itemPlayer__btnForward"></div><div class="itemPlayer__volumeLineBox"><hr class="itemPlayer__volumeLine"><dov class="itemPlayer__volumePointer" style="left: 80%;"></dov></div><div class="itemPlayer__volume">80%</div></div></div></div></div></div><div class="eventItem eventItem_size_m "><div class="eventItem__mainInfoBox"><div class="eventItem__header"><div class="eventItem__icon icon icon_fridge"></div><div class="eventItem__title"> <span>Заканчивается молоко</span></div></div><div class="eventItem__infoBox"><div class="eventItem__source">Холодильник</div><div class="eventItem__time">17:23, Сегодня</div></div></div><div class="eventItem__descriptionBox "><div class="eventItem__description">Кажется, в холодильнике заканчивается молоко. Вы хотите добавить его в список покупок?</div><div class="eventItem__dataBox"><div class="buttonsYesNo"><button class="btn btn_yellow buttonsYesNo__yes">Да</button><button class="btn btn_gray buttonsYesNo__no">Нет</button></div></div></div></div><div class="eventItem eventItem_size_s "><div class="eventItem__mainInfoBox"><div class="eventItem__header"><div class="eventItem__icon icon icon_battery"></div><div class="eventItem__title"> <span>Зарядка завершена</span></div></div><div class="eventItem__infoBox"><div class="eventItem__source">Оконный сенсор</div><div class="eventItem__time">16:22, Сегодня</div></div></div><div class="eventItem__descriptionBox eventItem__descriptionBox_oneRow"><div class="eventItem__description">Ура! Устройство «Оконный сенсор» снова в строю!</div><div class="eventItem__dataBox"></div></div></div><div class="eventItem eventItem_size_l eventItem_warning"><div class="eventItem__mainInfoBox"><div class="eventItem__header"><div class="eventItem__icon icon icon_cam_white"></div><div class="eventItem__title"> <span>Пылесос застрял</span></div></div><div class="eventItem__infoBox"><div class="eventItem__source">Сенсор движения</div><div class="eventItem__time">16:17, Сегодня</div></div></div><div class="eventItem__descriptionBox "><div class="eventItem__description">Робопылесос не смог сменить свое местоположение в течение последних 3 минут. Похоже, ему нужна помощь.</div><div class="eventItem__dataBox"><div class="itemImage"><img class="itemImage__img" src="src/components/elementsBox/mixins/itemImage/img/image.jpg"></div></div></div></div><div class="eventItem eventItem_size_s "><div class="eventItem__mainInfoBox"><div class="eventItem__header"><div class="eventItem__icon icon icon_kettle"></div><div class="eventItem__title"> <span>Вода вскипела</span></div></div><div class="eventItem__infoBox"><div class="eventItem__source">Чайник</div><div class="eventItem__time">16:20, Сегодня</div></div></div></div></div></div><footer class="footer">
+<div class="footer__menu">
+<div class="footer__menu-item">
+<a href="#">Помощь</a>
+</div>
+<div class="footer__menu-item">
+<a href="#">Обратная связь</a>
+</div>
+<div class="footer__menu-item">
+<a href="#">Разработчикам</a>
+</div>
+<div class="footer__menu-item">
+<a href="#">Условия пользования</a>
+</div>
+<div class="footer__menu-item">
+<a href="/src/files/presentation.pdf" target="_blanck">Ссылка на лицензию</a>
+</div>
+</div>
+<div class="footer__copy">© 2001-2018 ООО «Яндекс»</div>
+</footer><input type="checkbox" id="menu-buton-chb">
+<label for="menu-buton-chb" class="slide-menu-bg">
+</label>
+<div class="slide-menu">
+<label for="menu-buton-chb" class="slide-menu__close icon icon_cross"></label>
+<div class="slide-munu__person-box">
+<div class="slide-menu__photo">
+<img src="src/img/avatar.jpg" alt="Аватар">
+</div>
+<div class="slide-menu__name">Геннадий Геннадьевич</div>
+<div class="slide-menu__mail">gennadij@yandex.ru</div>
+</div>
+<div class="slide-menu__menu">
+<div class="slide-menu__menu-item">Сводка</div>
+<div class="slide-menu__menu-item">Устройства</div>
+<div class="slide-menu__menu-item">Сценарии</div>
+</div>
+</div><script type="text/javascript" src="main.js"></script></body></html>
