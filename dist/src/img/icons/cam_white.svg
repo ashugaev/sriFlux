@@ -1,0 +1,20 @@
+<svg id="Icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: rgba(216,216,216,0);
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <circle id="Oval" class="cls-1" cx="26" cy="26" r="26"/>
+  <g id="_002-cctv" data-name="002-cctv" transform="translate(2 8)">
+    <path id="Shape" class="cls-2" d="M24,26a6,6,0,1,0-6-6A6.007,6.007,0,0,0,24,26Zm0-10a4,4,0,1,1-4,4A4,4,0,0,1,24,16Z"/>
+    <path id="Shape-2" data-name="Shape" class="cls-2" d="M23,21a1,1,0,0,0,1-1,1,1,0,0,0,0-2,2,2,0,0,0-2,2A1,1,0,0,0,23,21Z"/>
+    <path id="Shape-3" data-name="Shape" class="cls-2" d="M47,0H1A1,1,0,0,0,0,1V8a4,4,0,0,0,4,4v4a20,20,0,1,0,40,0V12a4,4,0,0,0,4-4V1A1,1,0,0,0,47,0ZM42,16A18,18,0,0,1,6,16V12H18.062a10,10,0,1,0,11.876,0H42ZM24,12a8,8,0,1,1-8,8A8.009,8.009,0,0,1,24,12ZM46,8a2,2,0,0,1-2,2H4A2,2,0,0,1,2,8V2H46Z"/>
+    <circle id="Oval-2" data-name="Oval" class="cls-2" cx="1" cy="1" r="1" transform="translate(36 14)"/>
+  </g>
+</svg>
