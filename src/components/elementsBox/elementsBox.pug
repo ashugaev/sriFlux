@@ -9,6 +9,9 @@ include ./mixins/itemPlayer/itemPlayer.pug
 .elementsBox
   each event in events
     div(class=`eventItem eventItem_size_${event.size} ${event.type === 'critical' ? 'eventItem_warning' : ''}`)
+      div(class=`icon icon_cross${event.type === 'critical' ? '_white' : ''} eventItem__cross`)
+      .eventItem__arrowBox
+         .icon.icon_next.eventItem__arrow
       .eventItem__mainInfoBox
         .eventItem__header
           div(class=`eventItem__icon icon icon_${event.icon}${event.type === 'critical' ? '_white' : ''}`)
