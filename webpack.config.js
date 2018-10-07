@@ -32,16 +32,16 @@ module.exports = {
           "sass-loader"
         ]
       },
-      {
-        test: /\.svg$/,
-        use: {
-          loader: "svg-url-loader",
-          options: {
-            limit: 3 * 1024,
-            noquotes: true
-          }
-        }
-      },
+      // {
+      //   test: /\.svg$/,
+      //   use: {
+      //     loader: "svg-url-loader",
+      //     options: {
+      //       limit: 3 * 1024,
+      //       noquotes: true
+      //     }
+      //   }
+      // },
       {
         test: /\.(png|jpg|gif)$/,
         use: [
