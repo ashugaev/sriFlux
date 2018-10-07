@@ -1,0 +1,22 @@
+.buttonsYesNo {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  grid-column-gap: 18px;
+  &__yes,
+  &__no {
+    width: 132px;
+    height: 54px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  .buttonsYesNo {
+    &__yes,
+    &__no {
+      width: 100px;
+      height: 45px;
+      font-size: 16px;
+    }
+  }
+}

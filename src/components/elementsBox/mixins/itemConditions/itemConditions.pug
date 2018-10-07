@@ -1,0 +1,10 @@
+mixin itemConditions(temperature, humidity)
+    .itemConditions
+        if typeof(temperature) === 'number'
+            .itemConditions__temperatureBox
+                span Температура:
+                b= temperature
+        if typeof(humidity) === 'number'
+            .itemConditions__humidity
+                span Влажность:
+                b= humidity

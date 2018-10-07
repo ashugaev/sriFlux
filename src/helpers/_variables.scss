@@ -1,22 +1,18 @@
 // break points
-$bp-main-top-box-1: 900px;
-$bp-popup: 700px;
-$bp-mobile: 700px;
-$bp-scenarios-toRight: 900px;
-
-// Перенос скролла в hello-box вправо
-$bp-hello-box-toRight-1: 620px;
-$bp-hello-box-toRight-2: 1030px;
-$bp-hello-box-toRight-3:  1250px;
-$bp-hello-box-toBottom-1:  899px;
-$bp-hello-box-toBottom-2:  1199px;
-
-// Смeна типа кнопок для фильтра устройств
-$bp-change-filter-btn: 900px;
-
-$main-mobile-padding: 20px;
+// $bp-
+$bp-one: 780px;
+$bp-two: 580px;
 
 // Цвета
+// $col-
+$col-red-warning: #ffdb5341;
+$col-gray-item: #fafafa;
+$col-gray-itemHover: #f3f3f3;
+$col-gray-btnNo: #e5e5e5;
+$col-yellow-btnYes: #ffd93e;
+$col-black-fontMain: #333333;
+
+
 $col-black: #333;
 $col-gray: #858585;
 $col-yellow: #ffd93e;
@@ -24,13 +20,14 @@ $col-yellow_hover: #fad32b;
 $col-yellow_active: #fecb2f;
 $col-white_hover: #fcfcfc;
 $col-white_active: #f0f0f0;
-$col-gray-light: #f2f1f0; 
-$col-gray-light_active: #ecebea; 
-$col-gray-light_hover: #ecebea; 
+$col-gray-light: #e5e5e5; 
+$col-gray-light_active: #d0cece; 
+$col-gray-light_hover: #d0cece; 
 $col-red: #ee2b2b;
-$col-gray-light-2: #f7f7f7; 
+$col-gray-light-2: #f7f7f7;
 
 // Шрифты
+// $fs-
 $fs-sm-1: 12px;
 $fs-sm-2: 13px;
 $fs-sm-3: 14px;
@@ -38,4 +35,3 @@ $fs-md-1: 16px;
 $fs-md-2: 18px;
 $fs-bg-1: 36px;
 $fs-bg-2: 66px;
-

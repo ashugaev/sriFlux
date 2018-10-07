@@ -1,0 +1,25 @@
+.itemConditions {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  grid-column-gap: 50px;
+  font-size: 18px;
+  & * {
+    color: #000;
+  }
+  & b {
+    margin-left: 5px;
+  }
+}
+
+@media screen and (max-width: $bp-one) {
+  .itemConditions {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 374px) {
+  .itemConditions {
+    grid-template-columns: max-content;
+    grid-row-gap: 10px;
+  }
+}
+

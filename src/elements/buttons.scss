@@ -1,0 +1,71 @@
+.btn {
+    display: inline-block;
+    white-space: nowrap;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    line-height: 1.5;
+    transition: background-color 0.05s;
+    outline: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  .btn_yellow {
+    background-color: $col-yellow-btnYes;
+    color: $col-black;
+    font-weight: 600;
+  
+    &:hover {
+      background: $col-yellow_hover;
+    }
+  
+    &:focus {
+      background: $col-yellow_hover;
+    }
+  
+    &:active {
+      background: $col-yellow_active;
+    }
+  }
+  
+  .btn_white {
+    background-color: #fff;
+    $col-black: #333;
+    font-weight: 600;
+  
+    &:hover {
+      background: $col-white_hover;
+    }
+  
+    &:focus {
+      background: $col-white_hover;
+    }
+  
+    &:active {
+      background: $col-white_active;
+    }
+  }
+  
+  .btn_gray {
+    background-color: $col-gray-light;
+    color: #000;
+    font-weight: 600;
+  
+    &:hover {
+      background: $col-gray-light_hover;
+    }
+  
+    &:focus {
+      background: $col-gray-light_hover;
+    }
+  
+    &:active {
+      background: $col-gray-light_active;
+    }
+  }

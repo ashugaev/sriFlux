@@ -1,0 +1,18 @@
+
+mixin itemPlayer({albumcover, artist, track, volume})
+    .itemPlayer
+        .itemPlayer__trackInfo
+            img(class="itemPlayer__cover" src=albumcover)
+            .itemPlayer__trackName= track.name
+            .itemPlayer__timeBox
+                .itemPlayer__timeLineBox
+                    hr.itemPlayer__timeLine
+                    .itemPlayer__timePointer
+                .itemPlayer__timeValue= track.length
+        .itemPlayer__controllers
+            .icon.icon_nextMusic.itemPlayer__btnBack
+            .icon.icon_nextMusic.itemPlayer__btnForward
+            .itemPlayer__volumeLineBox
+                hr.itemPlayer__volumeLine
+                dov(class="itemPlayer__volumePointer" style=`left: ${volume}%;`)
+            .itemPlayer__volume= volume + '%'

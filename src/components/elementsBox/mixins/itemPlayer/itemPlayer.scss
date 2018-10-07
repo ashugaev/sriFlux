@@ -1,0 +1,94 @@
+//Info
+.itemPlayer {
+  display: grid;
+  grid-row-gap: 20px;
+
+  &__cover {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    grid-area: 1/1/3/2;
+  }
+  &__trackInfo {
+    display: grid;
+    grid-template-columns: 53px auto;
+    grid-template-rows: 25px auto;
+    grid-column-gap: 15px;
+  }
+  &__timeBox {
+    grid-area: 2/2/3/3;
+    align-items: center;
+    display: grid;
+    grid-template-columns: auto min-content;
+    grid-column-gap: 30px;
+  }
+  &__timeLine {
+    width: calc(100% + 10px);
+    height: 2px;
+    background: #d8d8d8;
+    border: none;
+  }
+  &__timePointer {
+    position: absolute;
+    width: 12px;
+    height: 20px;
+    background: #d8d8d8;
+    border-radius: 4.5px;
+    left: 23%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &__timeLineBox {
+    position: relative;
+    position: relative;
+  }
+  &__trackName {
+    font-size: 20px;
+    grid-area: 1/2/3/2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+//Controllers
+.itemPlayer {
+  &__controllers {
+    display: grid;
+    grid-template-columns: 53px 53px auto min-content;
+    grid-template-rows: min-content;
+    grid-column-gap: 25px;
+    align-items: center;
+  }
+  &__btnForward {
+    transform: rotate(180deg);
+  }
+  &__btnForward,
+  &__btnBack {
+    // width: 50px;
+    // height: 50px;
+  }
+  &__volume {
+     font-size: 14px;
+     color: #a1a1a1;
+  }
+  &__volumeLine {
+    width: calc(100% + 16px);
+    height: 2px;
+    background: #d8d8d8;
+    border: none;
+  }
+  &__volumeLineBox {
+      position: relative;
+      margin-right: 20px;
+  }
+  &__volumePointer {
+      height: 16px;
+      width: 16px;
+      border-radius: 50%;
+      background: #605757;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+  }
+}

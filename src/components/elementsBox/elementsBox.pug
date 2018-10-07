@@ -1,22 +1,40 @@
-- const eventsList = require("../../events.json")
-//- - const eventsJSON = JSON.stringify(eventsList);
 - const events = eventsList.events
-//- - console.log(events);
-//- #{events.length}
-// вывод переменное #{a}
-// вывод html !{a}
 
-//- include ../btnYesNo/btnYesNo.pug
+include ./mixins/graph/graph.pug
+include ./mixins/buttonsYesNo.pug
+include ./mixins/itemImage/itemImage.pug
+include ./mixins/itemConditions/itemConditions.pug
+include ./mixins/itemPlayer/itemPlayer.pug
 
-.elementsBox#blah
+.elementsBox
   each event in events
-    div(class="eventItem eventItem__size_"+event.size)
-      div(class="eventItem__icon icon icon_"+event.icon)
-      .eventItem__title #{event.title}
+    div(class=`eventItem eventItem_size_${event.size} ${event.type === 'critical' ? 'eventItem_warning' : ''}`)
+      .eventItem__mainInfoBox
+        .eventItem__header
+          div(class=`eventItem__icon icon icon_${event.icon}${event.type === 'critical' ? '_white' : ''}`)
+          .eventItem__title 
+            span #{event.title}
+        .eventItem__infoBox
+          .eventItem__source #{event.source}
+          .eventItem__time #{event.time}
+      if event.description || event.data
+        div(class=`eventItem__descriptionBox ${!event.data ? 'eventItem__descriptionBox_oneRow' : ''}`)
+          .eventItem__description #{event.description}
+          .eventItem__dataBox
 
-      .eventItem__source #{event.source}
-      .eventItem__time #{event.time}
-      .eventItem__description #{event.description}
-      //- +bro//
+            - let dataType = (event.data && Object.keys(event.data).length) ? event.data : {}
+            - const {temperature, buttons, image, values, humidity, albumcover, artist, track, volume} = dataType;
+
+            if dataType.type == 'graph'
+              +graph(values)
+            else if temperature || humidity
+              +itemConditions(temperature, humidity)
+            else if track
+              +itemPlayer({albumcover, artist, track, volume})
+            else if buttons
+              +buttonYesNo(buttons)
+            else if image
+              +itemImage(image)
+
 
 

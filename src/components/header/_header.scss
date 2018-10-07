@@ -22,7 +22,6 @@
 
   &__menu {
     display: none;
-    margin-left: 50px;
     list-style-type: none;
   }
 
@@ -53,7 +52,7 @@
   }
 }
 
-@media screen and (min-width: $bp-mobile) {
+@media screen and (min-width: $bp-one) {
   .header {
     justify-content: flex-start;
 
