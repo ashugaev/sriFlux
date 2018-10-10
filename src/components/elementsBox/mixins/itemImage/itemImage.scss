@@ -3,6 +3,10 @@
   overflow: hidden;
   &__img {
     width: 100%;
-    height: auto;
+    height: 75vw;
+    max-height: 400px;
+    background:  url("/src/img/image.jpg");
+    background-size: 120%;
+    touch-action: none;
   }
 }
