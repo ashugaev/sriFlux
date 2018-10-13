@@ -1,14 +1,12 @@
 export function createVideoNodes(urls) {
-  const videoNode =
-    '<video id="video-%id%" class="camerasVideo" controls muted autoplay></video><canvas id="canvas-%id%" class="canvasVideo"></canvas>';
+  const videoNode = document.querySelector("template");
 
-  let allVideoNodes = "";
   urls.forEach((video, i) => {
-    const newNode = videoNode.replace(new RegExp("%id%", "g"), i);
-    console.log("asdf", newNode);
-    allVideoNodes += newNode;
+    var clon = videoNode.content.cloneNode(true);
+    clon.querySelector(".camerasVideo").id = `video-${i}`;
+    clon.querySelector(".canvasVideo").id = `canvas-${i}`;
+    document.querySelector(".videosBox").appendChild(clon);
   });
-  document.body.innerHTML = allVideoNodes;
 }
 
 export function startVideo(video, url) {
