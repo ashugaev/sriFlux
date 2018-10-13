@@ -1,0 +1,22 @@
+.camerasVideo {
+  display: none;
+  width: 100%;
+  height: auto;
+}
+
+.videoBox__item {
+  height: min-content;
+}
+
+.videosBox {
+  display: grid;
+  grid-template-columns: 40% 40%;
+  grid-template-rows: min-content;
+  grid-gap: 50px;
+  justify-content: center;
+}
+
+.canvasVideo {
+  width: 100%;
+  height: auto;
+}
