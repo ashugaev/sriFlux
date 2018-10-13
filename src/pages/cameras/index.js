@@ -1,3 +1,4 @@
+import "./index.scss";
 import { createVideoNodes, startVideo, initCanvas } from "./init";
 
 const urls = [
