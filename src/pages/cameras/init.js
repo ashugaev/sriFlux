@@ -30,8 +30,10 @@ export function initCanvas(selectorVideo, i) {
   var canvas = document.getElementById(`canvas-${i}`);
   var context = canvas.getContext("2d");
 
-  var cw = 640;
-  var ch = 480;
+  console.dir("vsdfv", v);
+  var cw = 400;
+  var ch = 200;
+
   canvas.width = cw;
   canvas.height = ch;
 
@@ -44,8 +46,18 @@ export function initCanvas(selectorVideo, i) {
   );
 
   function draw(selectorVideo, c, w, h) {
+    let realW = v.videoWidth;
+    let realH = v.videoHeight;
+    const ratio = realW / realH;
+    realW = w
+    realH = w / ratio
+    // console.log()
+
     if (selectorVideo.paused || v.ended) return false;
-    c.drawImage(selectorVideo, 0, 0, w, h);
-    setTimeout(draw, 20, selectorVideo, c, w, h);
+    c.drawImage(selectorVideo, 0, 0, realW, realH);
+    console.log("vv", v.videoWidth);
+    console.log("vv", v.videoHeight);
+
+    setTimeout(draw, 20, selectorVideo, c, realW, realH);
   }
 }
