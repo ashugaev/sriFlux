@@ -4,7 +4,13 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   mode: "development",
-  entry: "./src/main.js",
+  entry: {
+    app: "./src/main.js",
+    cameras: "./src/pages/cameras/index.js"
+  },
+  output: {
+    filename: "./dist/[name].bundle.js"
+  },
   module: {
     rules: [
       {
@@ -46,11 +52,17 @@ module.exports = {
   plugins: [
     new HtmlWebPackPlugin({
       template: "./src/index.pug",
-      filename: "./index.html"
+      filename: "./index.html",
+      chunks: ['app'],
+    }),
+    new HtmlWebPackPlugin({
+      template: "./src/pages/cameras/index.html",
+      filename: "./cameras/index.html",
+      chunks: ['cameras'],
     }),
     new MiniCssExtractPlugin({
       filename: "[name].css",
-      chunkFilename: "[id].css"
+      chunkFilename: "[id].css",
     })
   ]
 };
