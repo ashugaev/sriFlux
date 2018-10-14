@@ -69,7 +69,16 @@
     line-height: 40px;
     font-weight: 600;
     margin: 0 40px;
+    list-style-type: none;
 
+    & > a {
+      line-height: 40px;
+      font-weight: 600;
+      margin: 0 40px;
+      display: block;
+      text-decoration: none;
+      list-style-type: none;
+    }
     &:not(:last-child) {
       border-bottom: solid 1px #dedede;
     }
