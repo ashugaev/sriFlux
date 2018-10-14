@@ -4,7 +4,7 @@ export function createVideoNodes(urls) {
   urls.forEach((video, i) => {
     var clon = videoNode.content.cloneNode(true);
     clon.querySelector(".camerasVideo").id = `video-${i}`;
-    clon.querySelector(".canvasVideo").id = `canvas-${i}`;
+    // clon.querySelector(".canvasVideo").id = `canvas-${i}`;
     document.querySelector(".videosBox").appendChild(clon);
   });
 }
@@ -58,6 +58,6 @@ export function initCanvas(selectorVideo, i) {
     console.log("vv", v.videoWidth);
     console.log("vv", v.videoHeight);
 
-    setTimeout(draw, 20, selectorVideo, c, realW, realH);
+    setTimeout(draw, 60, selectorVideo, c, realW, realH);
   }
 }
