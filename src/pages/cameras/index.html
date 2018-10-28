@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <meta name='robots' content='noindex'>
+    <title>Test streams</title>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+</head>
+
+<body>
+    <div class="videosBox">
+    </div>
+    <template>
+        <div class='videoBox__item'>
+            <div class="one-more-video-box">
+                <div class="video-popup-box">
+                    <div class="bestvideoBoxEver">
+                        <video class="camerasVideo" muted="false" autoplay> </video>
+                        <div class="volumeIndicator">
+                        </div>
+                    </div>
+
+                    <div class="videoControllers">
+                        <button class="videoControllers__closeBtn">Закрыть</button>
+                        <span class="videoControllers__text videoControllers__cont">Контрастность</span>
+                        <input type="range" class='contrastController' min="0.3" max="2" step="0.1">
+                        <span class="videoControllers__text videoControllers__text videoControllers__bright">Яркость</span>
+                        <input type="range" class='brightnessController' min="0.3" max="2" step="0.1">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+    <div class="dark-bg"></div>
+</body>
+
+</html>
