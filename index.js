@@ -1,51 +1,29 @@
-import Dispatcher from './Dispatcher.js';
-import MicroEvent from './microevents.js'
-
-let AppDispatcher = new Dispatcher;
+import {
+    addItemAction
+} from './store/actions.js'
+import {
+    ListStore
+} from './store/storage.js'
 
 console.log('Создаем')
 
 // Store
-let ListStore = {
-    items: [],
-    getAll: () => {
-        return this.items;
-    }
-}
 
-MicroEvent.mixin(ListStore)
 
-// Подпишемся на событие change
-ListStore.bind('change', listChanged);
-
-function listChanged() {
+export function listChanged() {
     console.log('Изменилось')
 }
 
 // Dispatcher
 document.querySelector('button').addEventListener('click', (event) => {
     console.log('Создаем')
-    AppDispatcher.dispatch({
-        eventName: 'new-item',
-        newItem: {
-            name: 'Mango'
-        }
-    })
-
-    console.log('ListStore', ListStore)
+    addItemAction()
+    event.target.textContent = ListStore.getAll().length
+    console.log('ListStore', ListStore.getAll())
 })
 
 
-AppDispatcher.register((payload) => {
-    switch (payload.eventName) {
-        case 'new-item':
-            ListStore.items.push(payload.newItem);
-            ListStore.trigger('change');
-            break
-    }
 
-    return true
-})
 // let Store = {
 //     items: [],
 
