@@ -1,17 +1,4 @@
-/**
- * Copyright (c) 2014-present, Facebook, Inc.
- * All rights reserved.
- *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
- *
- * @providesModule Dispatcher
- * @flow
- * @preventMunge
- */
 'use strict';
-// exports.__esModule = true;
 import invariant from './invariant.js';
 
 var _prefix = 'ID_';
@@ -157,8 +144,7 @@ var Dispatcher = /** @class */ (function () {
                 }
                 this._invokeCallback(id);
             }
-        }
-        finally {
+        } finally {
             this._stopDispatching();
         }
     };
@@ -204,4 +190,6 @@ var Dispatcher = /** @class */ (function () {
     return Dispatcher;
 }());
 
-export default Dispatcher;
+// export default Dispatcher;
+let AppDispatcher = new Dispatcher;
+export default AppDispatcher;

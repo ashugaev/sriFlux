@@ -1,9 +1,8 @@
-import Dispatcher from '../Dispatcher.js';
+import AppDispatcher from '../Dispatcher.js';
 import {
     ListStore
 } from './storage.js'
 
-let AppDispatcher = new Dispatcher;
 
 export function addItemAction(i) {
     AppDispatcher.dispatch({
