@@ -3,7 +3,6 @@ import {
     ListStore
 } from './storage.js'
 
-
 export function addItemAction(i) {
     AppDispatcher.dispatch({
         eventName: 'new-item',
