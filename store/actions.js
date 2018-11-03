@@ -1,4 +1,4 @@
-import AppDispatcher from '../Dispatcher.js';
+import AppDispatcher from '../MyDispatcher.js';
 import {
     ListStore
 } from './storage.js'
