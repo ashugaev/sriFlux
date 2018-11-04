@@ -7,4 +7,8 @@ document.querySelector('.header__menu-item:nth-child(5)').addEventListener('clic
     changeRoute(event.target.getAttribute('href'))
 })
 
+// window.addEventListener('load', () => {
+//     addItemAction()
+// })
+
 console.log('zzz')

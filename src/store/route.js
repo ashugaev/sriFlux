@@ -1,4 +1,6 @@
 import Dispatcher from '../../ShriFlux/MyDispatcher';
+import EventEmitter from '../../ShriFlux/EventEmitter';
+
 
 export const AppDispatcher = new Dispatcher;
 
@@ -13,13 +15,19 @@ export let routeState = {
 AppDispatcher.register((payload) => {
     switch (payload.eventName) {
         case 'CHANGE_ROUTE':
-            console.log('Дошло до стора', payload.route);
             routeState.route = payload.route;
-
-            console.log('Наш новы стейт', routeState.getRoute())
+            routeState.trigger('CHANGE_ROUTE')
 
             break
     }
 
     return true
 })
+
+function routeChanged() {
+    console.log(window.location.host + routeState.getRoute())
+    document.location.href =  routeState.getRoute();
+}
+
+EventEmitter.mixin(routeState);
+routeState.bind('CHANGE_ROUTE', routeChanged);
