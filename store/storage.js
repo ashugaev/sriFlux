@@ -1,4 +1,4 @@
-import MicroEvent from '../microevents.js'
+import EventEmitter from '../EventEmitter.js'
 
 import {
     listChanged
@@ -13,7 +13,8 @@ export let ListStore = {
     }
 }
 
-MicroEvent.mixin(ListStore)
+// Пишет listStore в хранилище, что бы мутировать его из
+EventEmitter.mixin(ListStore)
 
-// Подпишемся на событие change
+// При вызобе сhange выполним listChanged
 ListStore.bind('change', listChanged);

@@ -2,6 +2,7 @@ import Dispatcher from '../MyDispatcher.js';
 import {
     ListStore
 } from './storage.js'
+import { createCookie } from '../CookieHandler.js';
 
 // Создает из ф-ции объект
 const AppDispatcher = new Dispatcher;
@@ -20,7 +21,8 @@ AppDispatcher.register((payload) => {
         case 'new-item':
             console.log('register callback')
             ListStore.items.push(payload.newItem);
-            ListStore.trigger('change');
+            createCookie('states', )
+            ListStore.trigger('change', ListStore.getAll());
             break
     }
 
