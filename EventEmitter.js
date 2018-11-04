@@ -24,8 +24,8 @@ const EventEmitter = (function () {
     EventEmitter.prototype.trigger = function (eventName /* , args... */ ) {
         this.events = this.events || {}
         if (eventName in this.events === false) return
-        for (let i = 0; i < this.events[eventName]; i++) {
-            this.events[event][i].apply(this, Array.prototype.slice.call(arguments, 1))
+        for (let i = 0; i < this.events[eventName].length; i++) {
+            this.events[eventName][i].apply(this, Array.prototype.slice.call(arguments, 1))
         }
     }
 
