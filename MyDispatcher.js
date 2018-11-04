@@ -7,6 +7,7 @@ const Dispatcher = (function () {
         this.isHandled = {};
     }
 
+    // Записали наш callback, которые сработает при dispatch
     Dispatcher.prototype.register = function (callback) {
         const id = `ID_${this.lastID++}`;
         this.callbacks[id] = callback;
@@ -17,18 +18,9 @@ const Dispatcher = (function () {
         delete this._callbacks[id];
     }
 
-    Dispatcher.prototype.waitFor = function (ids) {
-        for (let i = 0; i < ids.length; i++) {
-            let id = ids[i];
-            // isPending задается в invokeCallback(при вызове каллбека)
-            if (this.isPending[id]) {
-                continue
-            }
-            // Если не вызван - вызваем
-            this.invokeCallback(id)
-        }
-    }
 
+
+    // Вызываем для мутации стейта
     Dispatcher.prototype.dispatch = function (payload) {
         this.startDispatching(payload);
         try {
@@ -56,6 +48,7 @@ const Dispatcher = (function () {
         this.isHandled[id] = true;
     }
 
+    // Переводит все экшены в статуы ожидания, записывает callbacks и включет режим диспатчинга
     Dispatcher.prototype.startDispatching = function (payload) {
         for (let id in this.callbacks) {
             this.isPending[id] = false;
@@ -65,6 +58,7 @@ const Dispatcher = (function () {
         this.isDispatching = true;
     }
 
+    // После вызова всех келлбеков удаляет данные экшена и выключает режим диспатчинга
     Dispatcher.prototype.stopDispatching = function () {
         delete this.pendingPayload;
         this.isDispatching = false;
@@ -73,7 +67,4 @@ const Dispatcher = (function () {
     return Dispatcher;
 })()
 
-// Создает из ф-ции объект
-const AppDispather = new Dispatcher;
-
-export default AppDispather;
+export default Dispatcher;
