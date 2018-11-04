@@ -21,8 +21,10 @@ AppDispatcher.register((payload) => {
         case 'new-item':
             console.log('register callback')
             ListStore.items.push(payload.newItem);
-            createCookie('states', )
-            ListStore.trigger('change', ListStore.getAll());
+            createCookie('states', ListStore.getAll())
+            createCookie('sss', 234234)
+            console.log('all', ListStore.getAll())
+            ListStore.trigger('change', listChanged);
             break
     }
 

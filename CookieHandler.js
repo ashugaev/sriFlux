@@ -1,5 +1,6 @@
 export function createCookie(name, value) {
     var cookie = [name, '=', JSON.stringify(value), '; domain=.', window.location.host.toString(), '; path=/;'].join('');
+    console.log('cookie', cookie)
     document.cookie = cookie;
 }
 
