@@ -4,7 +4,7 @@ export function createCookie(name, value) {
     document.cookie = cookie;
 }
 
-export function getGookie(name) {
+export function getСookie(name) {
     var result = document.cookie.match(new RegExp(name + '=([^;]+)'));
     result && (result = JSON.parse(result[1]));
     return result;
