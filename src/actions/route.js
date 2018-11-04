@@ -7,5 +7,4 @@ export function changeRoute(route) {
         eventName: 'CHANGE_ROUTE',
         route
     })
-    console.log(route)
 }

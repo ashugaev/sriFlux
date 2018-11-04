@@ -1,6 +1,9 @@
 import Dispatcher from '../../ShriFlux/MyDispatcher';
 import EventEmitter from '../../ShriFlux/EventEmitter';
-
+import {
+    createCookie,
+    getGookie
+} from '../../ShriFlux/CookieHandler';
 
 export const AppDispatcher = new Dispatcher;
 
@@ -25,8 +28,11 @@ AppDispatcher.register((payload) => {
 })
 
 function routeChanged() {
-    console.log(window.location.host + routeState.getRoute())
-    document.location.href =  routeState.getRoute();
+    let store = getGookie('store') || {}
+    const route = routeState.getRoute();
+    store.route = route;
+    createCookie('store', store);
+    document.location.href = route;
 }
 
 EventEmitter.mixin(routeState);
